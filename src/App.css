@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.main-content {
+  margin: 0 auto;
+  margin-top: 15vh;
+  width: 66vw;
+  height: 70vh;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: solid 2px blue; */
+}
+
+.product-left-side {
+  width: 45%;
+  height: 100%;
+  /* border: solid black 1px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+.product-right-side {
+  width: 45%;
+  height: 100%;
+  /* border: solid black 1px; */
+}
+
+.main-picture-holder {
+  width: 100%;
+  height: 55%;
+  border-radius: 20px;
+}
+
+.main-picture-holder img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.miniatures-pictures-holder {
+  width: 100%;
+  height: 20%;
+  /* border: black solid 1px; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.miniatures {
+  width: 22%;
+  height: 77%;
+}
+
+.miniatures img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.right-content {
+  width: 100%;
+  height: 55%;
+  /* border: orange solid 1px; */
+  display: flex;
+  justify-content: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 15%;
+}
+
+.right-content h2 {
+  font-size: 16px;
+  color: #fe5234;
+}
+
+.right-content h1 {
+  font-size: 37px;
+}
+
+.right-content h3 {
+  font-size: 32px;
+}
+
+.right-content p {
+  color: rgb(174, 174, 174);
+  font-weight: 400;
+}
+.right-content span {
+  color: rgb(174, 174, 174);
+  text-decoration: line-through;
+}
+
+.add-to-cart-button {
+  color: white;
+  width: 50%;
+  border-radius: 12px;
+  height: 3rem;
+  background-color: #fe5234;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.add-to-cart-button p {
+  color: white;
+  font-weight: bold;
+}
+
+.top-title {
+  /* border: solid 1px red; */
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.outlet {
+  display: flex;
+}
+
+.outlet div {
+  font-size: 16px;
+  color: #fe5234;
+  height: 100%;
+  width: 10%;
+  background-color: rgba(247, 201, 166, 0.722);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  margin-left: 3%;
+}
+.drop-down {
+  height: 3.5rem;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 400;
+  justify-content: space-between;
+}
+.drop-holder {
+  height: 55%;
+  border: solid 1px black;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.drop-content {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.buttons-display {
+  color: white;
+  width: 25%;
+  border-radius: 12px;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+}
+
+.buttons-display p {
+  color: black;
+  font-weight: bold;
+}
+
+.button-cart {
+  height: 100%;
+  width: 33%;
+  background-color: #fe5234;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sizes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  width: 100%;
+  justify-content: center;
+  padding-left: 12%;
+}
