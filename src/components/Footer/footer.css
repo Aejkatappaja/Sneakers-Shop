@@ -60,3 +60,17 @@
     transform: translate3d(-100%, 0, 0); /* position finale à gauche */
   }
 }
+
+@media screen and (max-width: 640px) {
+  .footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    justify-content: space-around;
+  }
+  .footer div {
+    width: 100%;
+  }
+}

@@ -119,3 +119,24 @@
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 640px) {
+  .header {
+    width: 100vw;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+  .left-side {
+    padding-left: 5%;
+  }
+  .sale {
+    display: none;
+  }
+  .informations h2 {
+    display: none;
+  }
+  .right-side {
+    display: flex;
+    justify-content: space-between;
+  }
+}
