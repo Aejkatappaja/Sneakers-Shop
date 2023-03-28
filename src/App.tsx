@@ -2,14 +2,20 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faCartShopping, faSortDown } from "@fortawesome/free-solid-svg-icons";
-library.add(faCartShopping, faSortDown);
+import {
+  faCartShopping,
+  faSortDown,
+  faTrashCan,
+  faCreditCard,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faCartShopping, faSortDown, faTrashCan, faCreditCard);
 
 import { productInfo } from "./data/Product";
 
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Modale from "./components/Modale";
+import Footer from "./components/Footer";
 
 export type cartItem = {
   product: string;
@@ -24,6 +30,7 @@ const App = () => {
   const [pictureModal, setPictureModal] = useState(false);
   const [cartModal, setCartModal] = useState(false);
   const [cart, setCart] = useState<cartItem[]>([]);
+  const [size, setSize] = useState(false);
 
   return (
     <Router>
@@ -47,6 +54,8 @@ const App = () => {
               setCart={setCart}
               pictureModal={pictureModal}
               setPictureModal={setPictureModal}
+              size={size}
+              setSize={setSize}
             />
           }
         />
@@ -62,7 +71,11 @@ const App = () => {
         cartModal={cartModal}
         setCartModal={setCartModal}
         cart={cart}
+        setCart={setCart}
+        size={size}
+        setSize={setSize}
       />
+      <Footer />
     </Router>
   );
 };
