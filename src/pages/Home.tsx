@@ -3,6 +3,7 @@ import { productInfo } from "../data/Product";
 import { useState } from "react";
 import { cartItem } from "../App";
 import DisplayImg from "../components/DisplayImg";
+import toast, { Toaster } from "react-hot-toast";
 
 interface HomeProps {
   isVisible: boolean;
@@ -20,7 +21,6 @@ interface HomeProps {
 const Home = ({
   size,
   setSize,
-  isVisible,
   setIsVisible,
   img,
   setImg,
@@ -39,7 +39,7 @@ const Home = ({
         const updatedCart = [...cart];
         updatedCart[index].quantity += 1;
         setCart(updatedCart);
-      } else alert("No more stock");
+      } else toast.error("No more stock");
     } else {
       const newItem: cartItem = {
         product: productInfo.name,
@@ -77,6 +77,7 @@ const Home = ({
 
   return (
     <main className="main-content">
+      <Toaster />
       <div className="bread-crumb">
         Home ﹥ Sale ﹥ Nike ﹥ Air Jordan 1 Low Starfish
       </div>
@@ -84,7 +85,6 @@ const Home = ({
         <section className="product-left-side">
           <DisplayImg
             data={productInfo}
-            isVisible={isVisible}
             setIsVisible={setIsVisible}
             img={img}
             setImg={setImg}
@@ -100,7 +100,7 @@ const Home = ({
               <h1>{productInfo.name}</h1>
             </div>
 
-            <p>{productInfo.description}</p>
+            <p className="p-hell">{productInfo.description}</p>
             <div className="top-title">
               <h3 className="outlet">
                 {productInfo.price}€ <div>{productInfo.discount} %</div>
@@ -139,7 +139,7 @@ const Home = ({
                   onClick={() =>
                     size
                       ? handleAddToCart(productInfo.name)
-                      : alert("You must choose a size !")
+                      : toast.error("You must choose a size !")
                   }
                 >
                   <FontAwesomeIcon icon="cart-shopping" />

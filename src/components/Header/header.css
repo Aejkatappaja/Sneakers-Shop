@@ -49,10 +49,21 @@
   font-size: 18px;
   color: rgb(183, 180, 180);
 }
+
+.informations h2:hover {
+  cursor: default;
+  transform: scale(1.2);
+}
+
 .sale {
   color: #fe5234;
   font-size: 18px;
   font-weight: normal;
+}
+
+.sale:hover {
+  cursor: default;
+  transform: scale(1.2);
 }
 
 .right-side {

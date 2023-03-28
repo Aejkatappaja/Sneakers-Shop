@@ -8,7 +8,6 @@ const Footer = () => {
     <footer className="footer">
       <div>
         <h2>Contact us</h2>|<h2>Payment options</h2>|<h2>Shipping</h2>
-        <h2></h2>
       </div>
       <section className="moving-text">
         <div>
@@ -17,6 +16,7 @@ const Footer = () => {
           </p>
         </div>
       </section>
+
       <div>
         <img src={icons.Twitter} alt="" />|
         <img src={icons.Facebook} alt="" />|

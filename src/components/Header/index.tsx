@@ -3,19 +3,21 @@ import avatar from "../../assets/images/Frank.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { cartItem } from "../../App";
 
+interface HomeProps {
+  isVisible: boolean;
+  setIsVisible: (isVisible: boolean) => void;
+  cart: cartItem[];
+  cartModal: boolean;
+  setCartModal: (cartModal: boolean) => void;
+}
+
 const Header = ({
   isVisible,
   setIsVisible,
   cart,
   cartModal,
   setCartModal,
-}: {
-  cart: cartItem[];
-  cartModal: boolean;
-  setCartModal: (cartModal: boolean) => void;
-  isVisible: boolean;
-  setIsVisible: (isVisible: boolean) => void;
-}) => {
+}: HomeProps) => {
   return (
     <div className="header">
       <nav className="header-content">

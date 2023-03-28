@@ -13,10 +13,20 @@ interface ImageData {
 }
 interface Datas {
   data: ImageData;
+  cart: cartItem[];
+  setCart: (cart: cartItem[]) => void;
+  isVisible: boolean;
+  setIsVisible: (isVisible: boolean) => void;
+  setSize: (size: boolean) => void;
+  pictureModal: boolean;
+  setPictureModal: (pictureModal: boolean) => void;
+  img: string;
+  setImg: (imgUrl: string) => void;
+  cartModal: boolean;
+  setCartModal: (cartModal: boolean) => void;
 }
 
 const Modale = ({
-  size,
   setSize,
   cart,
   setCart,
@@ -29,20 +39,7 @@ const Modale = ({
   setImg,
   pictureModal,
   setPictureModal,
-}: Datas & {
-  cart: cartItem[];
-  setCart: (cart: cartItem[]) => void;
-  isVisible: boolean;
-  setIsVisible: (isVisible: boolean) => void;
-  size: boolean;
-  setSize: (size: boolean) => void;
-  pictureModal: boolean;
-  setPictureModal: (pictureModal: boolean) => void;
-  img: string;
-  setImg: (imgUrl: string) => void;
-  cartModal: boolean;
-  setCartModal: (cartModal: boolean) => void;
-}) => {
+}: Datas) => {
   return (
     <>
       {isVisible &&
@@ -57,7 +54,6 @@ const Modale = ({
             <div className="modal" onClick={(e) => e.stopPropagation()}>
               <DisplayImg
                 data={data}
-                isVisible={isVisible}
                 setIsVisible={setIsVisible}
                 img={img}
                 setImg={setImg}
@@ -95,7 +91,7 @@ const Modale = ({
                   </div>
 
                   <div className="cart-button-holder">
-                    <div className="add-to-cart-button-modal">
+                    <div className="checkout-button-modal">
                       <FontAwesomeIcon icon="credit-card" />
                       <p> Checkout</p>
                     </div>
