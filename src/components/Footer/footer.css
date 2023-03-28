@@ -1,0 +1,62 @@
+.footer {
+  width: 70vw;
+  height: 14vh;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #fff;
+  border-bottom: rgb(174, 174, 174) solid 1px;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px -20px 20px -20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer div {
+  width: 30%;
+  height: 60%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2%;
+}
+.footer img {
+  width: 25px;
+  height: 25px;
+}
+
+.moving-text {
+  height: 100%;
+  width: 30%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.moving-text > :first-child {
+  padding-right: 2em;
+  padding-left: 100%;
+  white-space: nowrap;
+  animation: defilement-rtl 15s infinite linear;
+  font-size: 20px;
+}
+
+.moving-text > :first-child span {
+  border-bottom: solid 3px #fe5234;
+  font-weight: bold;
+}
+
+@keyframes defilement-rtl {
+  0% {
+    transform: translate3d(0, 0, 0); /* position initiale à droite */
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0); /* position finale à gauche */
+  }
+}

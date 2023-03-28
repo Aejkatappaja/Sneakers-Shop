@@ -1,10 +1,12 @@
 import "./modale.css";
 import DisplayImg from "../DisplayImg";
 import { cartItem } from "../../App";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface ImageData {
   name: string;
   price: number;
+  size: number;
   quantity: number;
   mainPicture: string;
   miniaturePictures: string[];
@@ -14,7 +16,10 @@ interface Datas {
 }
 
 const Modale = ({
+  size,
+  setSize,
   cart,
+  setCart,
   cartModal,
   setCartModal,
   data,
@@ -26,8 +31,11 @@ const Modale = ({
   setPictureModal,
 }: Datas & {
   cart: cartItem[];
+  setCart: (cart: cartItem[]) => void;
   isVisible: boolean;
   setIsVisible: (isVisible: boolean) => void;
+  size: boolean;
+  setSize: (size: boolean) => void;
   pictureModal: boolean;
   setPictureModal: (pictureModal: boolean) => void;
   img: string;
@@ -71,9 +79,27 @@ const Modale = ({
               <div className="cart-modal" onClick={(e) => e.stopPropagation()}>
                 <img src={data.mainPicture} alt="" />
                 <div className="cart-infos">
-                  <div>Price: {data.price} €</div>
-                  <div> Quantity: {cart[0].quantity} </div>
-                  <div>Total: {data.price * cart[0]?.quantity} €</div>
+                  <div className="name-cart">{data.name}</div>
+                  <div>{data.size}</div>
+                  <div>
+                    {data.price}€ x {cart[0].quantity} :
+                    <span> {data.price * cart[0]?.quantity}€</span>
+                    <FontAwesomeIcon
+                      icon="trash-can"
+                      className="trash"
+                      onClick={() => {
+                        setCart([]);
+                        setSize(false);
+                      }}
+                    />
+                  </div>
+
+                  <div className="cart-button-holder">
+                    <div className="add-to-cart-button-modal">
+                      <FontAwesomeIcon icon="credit-card" />
+                      <p> Checkout</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>

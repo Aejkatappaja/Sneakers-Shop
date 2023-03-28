@@ -22,27 +22,35 @@ const Header = ({
         <div className="left-side">
           <h1>sneakers</h1>
           <section className="informations">
-            <h2>Collections</h2>
-            <h2>Men</h2>
-            <h2>Women</h2>
-            <h2>About</h2>
-            <h2>Contact</h2>
+            <h2>NEW ARRIVALS</h2>
+            <h2>UPCOMING</h2>
+            <h4 className="sale">SALE</h4>
           </section>
         </div>
 
         <div className="right-side">
-          <span
-            className="icon-holder"
-            onClick={() => {
-              setCartModal(!cartModal);
-              setIsVisible(!isVisible);
-            }}
-          >
-            <FontAwesomeIcon icon="cart-shopping" />
-            <div className={cart[0]?.quantity ? "counter" : ""}>
-              {cart[0]?.quantity}
-            </div>
-          </span>
+          {cart.length > 0 ? (
+            <span
+              className="icon-holder"
+              onClick={() => {
+                setCartModal(!cartModal);
+                setIsVisible(!isVisible);
+              }}
+            >
+              <FontAwesomeIcon icon="cart-shopping" />
+              <div className={cart[0]?.quantity ? "counter" : ""}>
+                {cart[0]?.quantity}
+              </div>
+            </span>
+          ) : (
+            <span className="icon-holder">
+              <FontAwesomeIcon icon="cart-shopping" />
+              <div className={cart[0]?.quantity ? "counter" : ""}>
+                {cart[0]?.quantity}
+              </div>
+            </span>
+          )}
+
           <div className="avatar-holder">
             <img className="avatar-image" src={avatar} alt="" />
           </div>

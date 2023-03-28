@@ -25,7 +25,7 @@ export const productInfo: ProductInfo = {
     "https://res.cloudinary.com/dmskvrfgc/image/upload/v1679902243/Sneakers/Starfish3_g05q0i.jpg",
   miniaturePictures: [
     "https://res.cloudinary.com/dmskvrfgc/image/upload/v1679902569/Sneakers/Starfish6_tjdhws.jpg",
-    "https://res.cloudinary.com/dmskvrfgc/image/upload/v1679902008/Sneakers/starfish1_wcwiuk.jpg",
+    "https://res.cloudinary.com/dmskvrfgc/image/upload/v1679902243/Sneakers/Starfish3_g05q0i.jpg",
     "https://res.cloudinary.com/dmskvrfgc/image/upload/v1679902242/Sneakers/Starfish4_noizfi.jpg",
     "https://res.cloudinary.com/dmskvrfgc/image/upload/v1679902239/Sneakers/Starfish5_tzhbd8.jpg",
   ],
