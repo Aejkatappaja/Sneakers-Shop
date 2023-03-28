@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 interface ProductImageData {
   mainPicture: string;
   miniaturePictures: string[];
@@ -7,24 +5,21 @@ interface ProductImageData {
 
 interface DisplayImgProps {
   data: ProductImageData;
+  setIsVisible: (isVisible: boolean) => void;
+  img: string;
+  setImg: (img: string) => void;
+  pictureModal: boolean;
+  setPictureModal: (pictureModal: boolean) => void;
 }
 
 const DisplayImg = ({
   data,
-  isVisible,
   setIsVisible,
   img,
   setImg,
   pictureModal,
   setPictureModal,
-}: DisplayImgProps & {
-  isVisible: boolean;
-  setIsVisible: (isVisible: boolean) => void;
-  pictureModal: boolean;
-  setPictureModal: (pictureModal: boolean) => void;
-  img: string;
-  setImg: (imgUrl: string) => void;
-}) => {
+}: DisplayImgProps) => {
   return !pictureModal ? (
     <>
       <div

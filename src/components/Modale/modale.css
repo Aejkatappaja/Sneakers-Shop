@@ -100,7 +100,7 @@
   align-items: center;
   justify-content: center;
 }
-.add-to-cart-button-modal {
+.checkout-button-modal {
   background-color: #fe5234;
   display: flex;
   color: white;
@@ -110,6 +110,14 @@
   justify-content: center;
   border-radius: 4px;
   gap: 4%;
+}
+
+.checkout-button-modal:hover {
+  cursor: pointer;
+}
+
+.checkout-button-modal:active {
+  transform: translateY(2px);
 }
 
 .trash {

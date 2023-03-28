@@ -72,7 +72,6 @@ const App = () => {
         setCartModal={setCartModal}
         cart={cart}
         setCart={setCart}
-        size={size}
         setSize={setSize}
       />
       <Footer />
