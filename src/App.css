@@ -264,6 +264,7 @@
     height: 70vh;
     /* border: rgb(170, 32, 32) 2px solid; */
     margin-top: 15.5vh;
+    margin-bottom: 15.5vh;
   }
   .bread-crumb {
     display: none;
