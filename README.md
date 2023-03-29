@@ -22,7 +22,7 @@ npm run dev to start !
 
 ## Mobile Demo
 
-![Sneakers](https://imagizer.imageshack.com/v2/280x200q70/924/ZTITCj.png)
+![Sneakers](https://imagizer.imageshack.com/img923/3364/e6cd3g.pnggit)
 
 ## Support
 
