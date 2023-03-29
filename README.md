@@ -21,7 +21,7 @@ npm run dev to start !
 ![Sneakers](https://imagizer.imageshack.com/img923/3721/rXpwQ8.png)
 ![Sneakers](https://imagizer.imageshack.com/img923/1908/dwsnbJ.png)
 ![Sneakers](https://imagizer.imageshack.com/img923/9420/CjAkuV.png)
-![Sneakers](https://imagizer.imageshack.com/img923/6842/LoXibY.png)
+![Sneakers](https://imagizer.imageshack.com/v2/280x200q70/923/LoXibY.png)
 
 ## Mobile Demo
 
