@@ -11,13 +11,13 @@ interface HomeProps {
   setCartModal: (cartModal: boolean) => void;
 }
 
-const Header = ({
+const Header: React.FC<HomeProps> = ({
   isVisible,
   setIsVisible,
   cart,
   cartModal,
   setCartModal,
-}: HomeProps) => {
+}) => {
   return (
     <div className="header">
       <nav className="header-content">
