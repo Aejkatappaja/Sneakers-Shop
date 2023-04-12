@@ -1,6 +1,7 @@
 import "./modale.css";
 import DisplayImg from "../DisplayImg";
 import { cartItem } from "../../App";
+//!! test
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface ImageData {
